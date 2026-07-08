@@ -1,35 +1,35 @@
-# 📚 Biblioteca Escolar
+# Biblioteca Escolar
 
 Sistema web de gestión de biblioteca escolar desarrollado con **PHP** y **MySQL**, siguiendo el patrón **MVC (Modelo–Vista–Controlador)**. Permite administrar el catálogo de libros y controlar los préstamos realizados a los estudiantes mediante operaciones **CRUD** completas.
 
-## 📝 Descripción del problema
+## Descripción del problema
 
 La aplicación resuelve la gestión manual de préstamos de libros en una institución educativa, permitiendo:
 - Registrar, editar, consultar y eliminar libros del catálogo.
 - Registrar préstamos a estudiantes y controlar su devolución.
 - Llevar el control automático de existencias (stock) disponibles de cada libro.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 ### Libros
 - Crear, listar, editar y eliminar libros.
 - Búsqueda por título o autor.
 - Validación de ISBN único.
 
-### Préstamos
+### Prestamos
 - Registrar un préstamo asociado a un libro y un estudiante.
 - Marcar un préstamo como devuelto (actualiza automáticamente el stock del libro).
 - Editar estado y fecha real de devolución.
 - Eliminar préstamos.
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **Backend:** PHP (arquitectura MVC, sin frameworks)
 - **Base de datos:** MySQL / MariaDB
 - **Frontend:** HTML5, CSS3, JavaScript (validaciones de cliente)
 - **Servidor local de pruebas:** XAMPP (Apache + MySQL)
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 proyecto_segundo_parcial/
@@ -46,7 +46,7 @@ proyecto_segundo_parcial/
     └── database.sql        # Script de creación e inserción de datos de ejemplo
 ```
 
-## ⚙️ Instalación y ejecución local (XAMPP)
+## Instalación y ejecución local (XAMPP)
 
 1. **Clonar o descargar** este repositorio dentro de la carpeta `htdocs` de tu instalación de XAMPP, por ejemplo:
    ```
@@ -76,21 +76,24 @@ proyecto_segundo_parcial/
    http://localhost/proyecto_segundo_parcial/public/index.php
    ```
 
-## 🔑 Credenciales de base de datos (entorno local)
+## Credenciales de base de datos (entorno local)
 
-| Parámetro | Valor |
-|---|---|
-| Host | 127.0.0.1 |
-| Puerto | 3306 |
-| Usuario | root |
-| Contraseña | (vacía) |
-| Base de datos | biblioteca_escolar |
+| Parametro | Valor |
+| Host - 127.0.0.1 |
+| Puerto - 3306 |
+| Usuario - root |
+| Contraseña - (vacia) |
+| Base de datos - biblioteca_escolar |
 
-## 👥 Autores
+## Autores
 
-- _Agregar nombre(s) del/los integrante(s) del grupo aquí_
+- Angulo Bustos Terry Abiud
+- Lozada Castro Kevin Alberto
+- Tovar Burgos Christian Jesus
+- Vargas Morales Cristobal Enrique 
+- Zurita Barco Andy Gabriel
 
-## 📌 Notas
+## Notas
 
 - Proyecto desarrollado como Segundo Parcial de la asignatura de Desarrollo de Aplicaciones Web con PHP.
 - Las validaciones se implementan tanto en el cliente (HTML5 + JavaScript) como en el servidor (PHP), conforme a los requisitos del proyecto.
