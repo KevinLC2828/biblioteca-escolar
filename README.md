@@ -1,7 +1,5 @@
 # Biblioteca Escolar
 
-**Demo en línea:** [http://bibliotecaescolar.infinityfreeapp.com/Proyecto_Segundo_Parcial/public/index.php](http://bibliotecaescolar.infinityfreeapp.com/Proyecto_Segundo_Parcial/public/index.php) 
-
 Sistema web de gestión de biblioteca escolar desarrollado con **PHP** y **MySQL**, siguiendo el patrón **MVC (Modelo–Vista–Controlador)**. Permite administrar el catálogo de libros y controlar los préstamos realizados a los estudiantes mediante operaciones **CRUD** completas.
 
 ## Descripción del problema
@@ -23,6 +21,16 @@ La aplicación resuelve la gestión manual de préstamos de libros en una instit
 - Marcar un préstamo como devuelto (actualiza automáticamente el stock del libro).
 - Editar estado y fecha real de devolución.
 - Eliminar préstamos.
+
+## Despliegue
+
+La aplicación fue desplegada en **InfinityFree** en lugar de Render, como alternativa válida. Se eligió InfinityFree por las siguientes razones:
+
+- **Soporte nativo de PHP y MySQL**: a diferencia de Render, que no ejecuta PHP de forma nativa (requiere configurar un contenedor Docker), InfinityFree está pensado específicamente para aplicaciones PHP + MySQL, sin configuración adicional.
+- **Base de datos MySQL gratuita incluida**: Render no ofrece bases de datos MySQL administradas en su plan gratuito (solo PostgreSQL); InfinityFree sí la incluye directamente en el panel.
+- **Panel simple tipo cPanel**: administración de archivos (File Manager), base de datos y phpMyAdmin desde un mismo panel, sin curva de aprendizaje adicional.
+
+🔗 **Demo en línea:** [http://bibliotecaescolar.infinityfreeapp.com/Proyecto_Segundo_Parcial/public/index.php](http://bibliotecaescolar.infinityfreeapp.com/Proyecto_Segundo_Parcial/public/index.php)
 
 ## Tecnologías utilizadas
 
