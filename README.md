@@ -78,7 +78,6 @@ proyecto_segundo_parcial/
 
 ## Credenciales de base de datos (entorno local)
 
-| Parametro | Valor |
 | Host - 127.0.0.1 |
 | Puerto - 3306 |
 | Usuario - root |
