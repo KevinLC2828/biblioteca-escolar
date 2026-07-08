@@ -1,5 +1,7 @@
 # Biblioteca Escolar
 
+**Demo en línea:** [http://bibliotecaescolar.infinityfreeapp.com/Proyecto_Segundo_Parcial/public/index.php](http://bibliotecaescolar.infinityfreeapp.com/Proyecto_Segundo_Parcial/public/index.php) 
+
 Sistema web de gestión de biblioteca escolar desarrollado con **PHP** y **MySQL**, siguiendo el patrón **MVC (Modelo–Vista–Controlador)**. Permite administrar el catálogo de libros y controlar los préstamos realizados a los estudiantes mediante operaciones **CRUD** completas.
 
 ## Descripción del problema
