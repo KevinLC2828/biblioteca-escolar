@@ -22,6 +22,22 @@ La aplicación resuelve la gestión manual de préstamos de libros en una instit
 - Editar estado y fecha real de devolución.
 - Eliminar préstamos.
 
+### Editoriales y Adquisiciones
+- CRUD completo de editoriales (nombre, país, teléfono, correo).
+- Registro de adquisiciones de libros por editorial, con cantidad, costo y estado (pendiente/recibido/cancelado).
+
+### Estudiantes y Sanciones
+- CRUD completo de estudiantes (nombres, apellidos, curso/grado, cédula, correo).
+- Registro de sanciones asociadas a un estudiante (motivo, monto, estado: pendiente/pagada/anulada).
+
+### Empleados y Turnos
+- CRUD completo de empleados (nombres, apellidos, cargo, teléfono, correo).
+- Asignación de turnos de trabajo por empleado (día, hora de inicio/fin, área).
+
+### Salas y Reservas
+- CRUD completo de salas (nombre, capacidad, ubicación, estado: disponible/mantenimiento).
+- Registro de reservas de sala (solicitante, fecha, horario, motivo, estado).
+
 ## Despliegue
 
 La aplicación fue desplegada en **InfinityFree** en lugar de Render, como alternativa válida. Se eligió InfinityFree por las siguientes razones:
@@ -46,15 +62,28 @@ proyecto_segundo_parcial/
 ├── public/
 │   ├── index.php          # Front Controller / enrutador principal
 │   ├── css/style.css
-│   └── js/validations.js  # Validaciones de cliente
+│   └── validacion.js      # Validaciones de cliente (todos los módulos)
 ├── app/
-│   ├── controllers/       # Lógica de negocio (LibroController, PrestamoController)
-│   ├── models/            # Acceso a datos (libro, prestamos)
-│   ├── views/              # Vistas HTML/PHP
-│   └── config/conexion.php # Conexión a la base de datos
+│   ├── controllers/       # Un controlador por cada entidad (10 en total)
+│   ├── models/            # Un modelo por cada entidad (10 en total)
+│   ├── views/              # Vistas HTML/PHP, organizadas por módulo
+│   └── config/conexion.php # Conexión a la base de datos (detecta local/producción)
 └── database/
-    └── database.sql        # Script de creación e inserción de datos de ejemplo
+    ├── database.sql             # Tablas base: libros y prestamos
+    └── database_extension.sql   # 8 tablas adicionales (4 pares por integrante)
 ```
+
+## Módulos por integrante
+
+Siguiendo el requisito de "CRUD completo de dos entidades relacionadas por integrante", el proyecto se organiza en 5 pares de entidades (padre-hijo, relación 1:N):
+
+| Integrante | Entidad padre | Entidad hija (relacionada) |
+|---|---|---|
+| Lozada Castro Kevin Alberto | 📖 Libros | 🗂️ Préstamos |
+| Angulo Bustos Terry Abiud | 🏢 Editoriales | 📦 Adquisiciones |
+| Tovar Burgos Christian Jesus | 🎓 Estudiantes | ⚠️ Sanciones |
+| Vargas Morales Cristobal Enrique | 🧑‍💼 Empleados | 🕒 Turnos |
+| Zurita Barco Andy Gabriel | 🚪 Salas | 📅 Reservas |
 
 ## Instalación y ejecución local (XAMPP)
 
@@ -68,8 +97,8 @@ proyecto_segundo_parcial/
 3. **Importar la base de datos:**
    - Ir a `http://localhost/phpmyadmin`
    - Ir a la pestaña **Importar**
-   - Seleccionar el archivo `database/database.sql`
-   - Ejecutar la importación (esto crea la base `biblioteca_escolar` con sus tablas y datos de ejemplo).
+   - Seleccionar el archivo `database/database.sql` y ejecutar la importación (crea la base `biblioteca_escolar` con las tablas `libros` y `prestamos`).
+   - Seleccionar la base de datos `biblioteca_escolar` en el panel izquierdo, ir de nuevo a **Importar** y seleccionar `database/database_extension.sql` (crea las 8 tablas adicionales de los demás integrantes).
 
 4. **Verificar la configuración de conexión** en `app/config/conexion.php`:
    ```php
