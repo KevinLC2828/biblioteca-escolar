@@ -7,14 +7,14 @@
 
 require_once __DIR__ . '/../app/controllers/libroController.php';
 require_once __DIR__ . '/../app/controllers/prestamosController.php';
-require_once __DIR__ . '/../app/controllers/EditorialController.php';
-require_once __DIR__ . '/../app/controllers/AdquisicionController.php';
-require_once __DIR__ . '/../app/controllers/EstudianteController.php';
-require_once __DIR__ . '/../app/controllers/SancionController.php';
-require_once __DIR__ . '/../app/controllers/EmpleadoController.php';
-require_once __DIR__ . '/../app/controllers/TurnoController.php';
-require_once __DIR__ . '/../app/controllers/SalaController.php';
-require_once __DIR__ . '/../app/controllers/ReservaController.php';
+require_once __DIR__ . '/../app/controllers/editorialController.php';
+require_once __DIR__ . '/../app/controllers/adquisicionesController.php';
+require_once __DIR__ . '/../app/controllers/estudianteController.php';
+require_once __DIR__ . '/../app/controllers/sancionesController.php';
+require_once __DIR__ . '/../app/controllers/empleadoController.php';
+require_once __DIR__ . '/../app/controllers/turnosController.php';
+require_once __DIR__ . '/../app/controllers/salaController.php';
+require_once __DIR__ . '/../app/controllers/reservasController.php';
 
 $route = $_GET['route'] ?? 'inicio';
 $id    = isset($_GET['id']) ? (int) $_GET['id'] : null;
